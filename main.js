@@ -8,6 +8,7 @@
     const todoAddBtn = document.querySelector('.todo__btn');
     const todoInput = document.querySelector('.todo__input');
     const todoListPending = document.querySelector('.todo__list--pending');
+    const todoRemoveAllBtn = document.querySelector('.footer__btn--clear');
     
     const dayNames = [
         'Sunday', 
@@ -75,6 +76,7 @@
     // Event listeners
     const setListeners = () => {
         todoAddBtn.addEventListener('click', addNewTodo)
+        todoRemoveAllBtn.addEventListener('click', removeAll)
     };
 
     // Add new todos
@@ -106,10 +108,19 @@
             <input type="checkbox">
             <span>${todo.text}</span>
             <button>
-                <i class="fa fa-trash"></i>
+               <i class="fa fa-trash"></i>
             </button>
         `;
     };
+
+    // const removeAll = () => {
+    //     todoRemoveAllBtn.addEventListener('click', removeAll)
+    // };
+
+    const removeAll = () => {  
+        window.localStorage.clear();
+    };
+
 
     init();
 })();
