@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(255, 81, 0);
+    display: grid;
+    place-items: center;
+    
+}
+.container {
+    display: block;
+    text-align: left;
+    padding-left: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.body__todo-insert {
+    justify-content: center;
+}
+.todo__list--pending div {
+    background-color: lightgray;
+    text-align: left;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.todo__footer {
+    margin: 5px;
+}
